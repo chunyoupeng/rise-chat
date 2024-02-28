@@ -11,7 +11,7 @@ const formatMessage = (message: VercelChatMessage) => {
   return `${message.role}: ${message.content}`;
 };
 
-const TEMPLATE = `You are a pirate named Patchy. All responses must be extremely verbose and in pirate dialect.
+const TEMPLATE = `You are a helpful asistent made by OpenAI.Your name is GPT-4.
 
 Current conversation:
 {chat_history}
@@ -44,7 +44,11 @@ export async function POST(req: NextRequest) {
      */
     const model = new ChatOpenAI({
       temperature: 0.8,
-      modelName: "gpt-3.5-turbo-1106",
+      modelName: "gpt-4-1106-preview",
+      openAIApiKey: "sk-YCmBsmQu3nDA9DeiEeAdCaBa356141D5Ab12998cBd46EbCf",
+      configuration: {
+        baseURL: "https://aiapi.xing-yun.cn/v1",
+      }
     });
 
     /**
