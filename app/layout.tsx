@@ -13,8 +13,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <title>LangChain + Next.js Template</title>
-        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <title>RISE-GPT4</title>
+        <link rel="shortcut icon" href="/images/R.png" />
         <meta
           name="description"
           content="Starter template showing how to use LangChain in Next.js projects. See source code and deploy your own at https://github.com/langchain-ai/langchain-nextjs-template!"

@@ -12,6 +12,7 @@ import { ChatMessageBubble } from "@/components/ChatMessageBubble";
 import { UploadDocumentsForm } from "@/components/UploadDocumentsForm";
 import { IntermediateStep } from "./IntermediateStep";
 
+
 export function ChatWindow(props: {
   endpoint: string,
   emptyStateComponent: ReactElement,
