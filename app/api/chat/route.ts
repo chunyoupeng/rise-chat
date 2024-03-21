@@ -44,7 +44,7 @@ export async function POST(req: NextRequest) {
      */
     const model = new ChatOpenAI({
       temperature: 0.8,
-      modelName: "gpt-4-1106-preview",
+      modelName: "gpt-4-0125-preview",
       openAIApiKey: "sk-YCmBsmQu3nDA9DeiEeAdCaBa356141D5Ab12998cBd46EbCf",
       configuration: {
         baseURL: "https://aiapi.xing-yun.cn/v1",
