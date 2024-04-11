@@ -1,5 +1,8 @@
 import type { Message } from "ai/react";
-import Markdown from 'react-markdown';
+import ReactMarkdown from 'react-markdown';
+import rehypeKatex from 'rehype-katex';
+import 'katex/dist/katex.min.css'; // 引入Katex的样式
+import rehypeRaw from 'rehype-raw';
 
 export function ChatMessageBubble(props: { message: Message, aiEmoji?: string, sources: any[] }) {
   const colorClassName =
@@ -16,10 +19,10 @@ export function ChatMessageBubble(props: { message: Message, aiEmoji?: string, s
       </div>
       <div className="whitespace-pre-wrap flex flex-col overflow-auto break-words">
         {/* <span>{props.message.content}</span> */}
-        <Markdown>
-      {props.message.content}
-    </Markdown>
 
+<ReactMarkdown rehypePlugins={[rehypeRaw, rehypeKatex as any]}>
+  {props.message.content}
+</ReactMarkdown>
       </div>
     </div>
   );
